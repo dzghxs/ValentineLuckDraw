@@ -110,14 +110,14 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "nodeName: " + nodeName);
                 switch (eventType) {
                     case XmlPullParser.START_TAG://开始解析
-                        if ("county".equals(nodeName)) {
+                        if ("W".equals(nodeName)) {
                             name = parser.getAttributeValue(null, "name");
                             namelist.add(name);
                         }
                         break;
 
                     case XmlPullParser.END_TAG://完成解析
-                        if ("county".equals(nodeName)) {
+                        if ("W".equals(nodeName)) {
                             Log.i(TAG, "name: " + name);
                             namelist.add(name);
                         }
